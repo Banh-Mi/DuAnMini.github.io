@@ -57,7 +57,7 @@ app.post("/signature", (req, res) => {
   console.log(message);
   // Read private key from file
   
-  const privateKey = fs.readFileSync('E:\\Ma_hoa\\private_key.pem', 'utf-8');
+  const privateKey = fs.readFileSync(path.join(__dirname, "private_key.pem"), 'utf-8');
 
   // Create signer
   const signer = crypto.createSign('SHA256');
